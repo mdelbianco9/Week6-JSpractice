@@ -144,7 +144,23 @@ console.log(between(100, 50));
 
 
 
+function user() {
+	var userName = prompt("What is your name stranger?");
 
+	if (userName.length > 4 && userName[0] == "m") {
+		for (i=0; i<userName.length; i++) {
+			document.write(userName[i] + " ");
+		}
+		document.write("! Nice to see you again");
+	}
+	else if (userName.length > 4 && userName[0] != "m") {
+		alert("NOPE!!")
+		document.write("Sorry, I dont recognize you. You Suck");
+		var userName = prompt("What is your name stranger?");
+	}
+};
+
+user();
 
 
 
